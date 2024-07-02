@@ -1,0 +1,119 @@
+
+// .login-form {
+//     @include breakpoint("medium") {
+//         width: 50%;
+//         float: none;
+//         margin: 0 auto;
+//     }
+// }
+
+// .new-customer {
+//     @include breakpoint("medium") {
+//         width: 50%;
+//         float: none;
+//         margin: 0 auto;
+//     }
+// }
+
+.login {
+    margin: 0 auto;
+    margin-bottom: 120px;
+
+    @include breakpoint("medium") {
+        margin-bottom: 180px;
+    }
+
+    @include breakpoint("large") {
+        margin-bottom: 220px;
+    }
+}
+
+.login-row {
+    @include breakpoint("medium") {
+        margin-top: spacing("single");
+    }
+}
+
+.login-form {
+    .form-actions {
+        @include breakpoint("medium") {
+            text-align: initial;
+
+            @include ie-only() {
+                text-align: left;
+            }
+        }
+
+        > * {
+            vertical-align: middle;
+        }
+    }
+}
+
+.new-customer {
+    @media (max-width: screenSize("medium") - 1px) {
+        border-top: container("border");
+    }
+    
+    .panel-header {
+        background-color: transparent;
+
+        @media (max-width: screenSize("medium") - 1px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .panel-body {
+        background-color: transparent;
+
+        @media (max-width: screenSize("medium") - 1px) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+
+        .button {
+            margin: 0;
+            padding-left: spacing("half");
+            padding-right: spacing("half");
+            width: 100%;
+            font-size: 20px;
+            letter-spacing: 0.75px;
+            font-family: "Bebas Neue";
+            color: #003082;
+            background: #fff;
+            border: 2px solid #003082;
+            border-radius: 0;
+            text-decoration: none;
+            outline: none;
+
+            @include breakpoint("medium") {
+                font-size: 22px;
+            }
+
+            &::after {
+                content: "";
+                position: relative;
+                width: 14px;
+                height: 14px;
+                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23003082'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+                background-size: contain;
+                display: inline-block;
+                @include breakpoint("medium") {
+                    top: 2px;
+                    height: 20px;
+                }
+            }
+
+            &:hover {
+                background: #003082;
+                color: #fff;
+
+                &::after {
+                    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+                }
+            }
+        }
+    }
+}

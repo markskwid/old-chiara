@@ -1,0 +1,33 @@
+{{#for 1 5}}
+    {{#if ../this.rating '>=' $index}}
+        <span class="icon icon--ratingFull">
+            <svg>
+                <use xlink:href="#icon-star" />
+            </svg>
+        </span>
+    {{else if false}}
+        <span class="icon icon--ratingEmpty">
+            <svg>
+                <use xlink:href="#icon-star" />
+            </svg>
+        </span>
+    {{/if}}
+{{/for}}
+{{#if ../this.rating '>' 0 }}
+    {{#if ../this.rating '!==' 1 }}
+        {{#if ../this.rating '!==' 2 }}
+            {{#if ../this.rating '!==' 3 }}
+                {{#if ../this.rating '!==' 4 }}
+                    {{#if ../this.rating '!==' 5 }}
+                        <span class="icon icon--ratingFull">
+                            <svg>
+                                <use xlink:href="#icon-halfstar" />
+                            </svg>
+                        </span>
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+{{/if}}
+{{{snippet 'product_rating'}}}

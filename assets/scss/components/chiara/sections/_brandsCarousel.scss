@@ -1,0 +1,243 @@
+.chiara-brandsCarousel-slider,
+.chiara-testimonialsCarousel-slider {
+    &:not(.slick-initialized) {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0 (-$container-padding / 2);
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
+        @include breakpoint("medium") {
+            margin: 0;
+            overflow: hidden;
+            justify-content: center;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.slick-slider {
+        overflow: visible;
+    }
+
+    .slick-prev,
+    .slick-next {
+        display: none;
+        margin-top: 0;
+        top: 50%;
+        opacity: 0;
+        transition: all .2s ease-in;
+
+        @include breakpoint("medium") {
+            display: block;
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+
+        @include breakpoint("xlarge") {
+            left: -50px;
+        }
+    }
+
+    .slick-next {
+        right: 0;
+
+        @include breakpoint("xlarge") {
+            right: -50px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .slick-prev,
+        .slick-next {
+            opacity: 1;
+        }
+    }
+}
+
+.chiara-brandsCarousel-item {
+    margin: 0 spacing("half");
+
+    a {
+        display: block;
+    }
+
+    img {
+        max-width: none;
+    }
+}
+.chiara-section--testimonialsCarousel {
+    .testimonialsCarousel-holder {
+        position: relative;
+        padding: 3.125% 0;
+        overflow: hidden;
+        max-height: 800px;
+        @include breakpoint("medium") {
+            // max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul {
+            margin: 0;
+            img {
+                width: 100%;
+                max-height: 600px;
+            }
+        }
+        .video_holder {
+            width: 100%;
+            position: absolute;
+            top: -10rem;
+            bottom: -10rem;
+            left: 0;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+
+            & > iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                pointer-events: none;
+                border: none;
+                // @include breakpoint("medium") {
+                //     margin: 0 4rem;
+                //     max-width: calc(100% - 8rem);
+                // }
+
+            }
+        }
+    }
+}
+// .html5-video-player {
+//     & > div, & > a {
+//         display: none;
+//         &.html5-video-container {
+//             display: block;
+//         }
+//     }
+// }
+.chiara-testimonialsCarousel-item {
+    position: relative;
+    margin: 0;
+    // margin: 0 spacing("half");
+    // @include breakpoint("medium") {
+    //     margin: 0 spacing("double") + spacing("half");
+    // }
+    .home-testimonials-content {
+        position: absolute;
+        top: spacing("half");
+        bottom: spacing("half");
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 16px;
+        @include breakpoint("small") {
+            top: spacing("single");
+            bottom: spacing("single");
+            padding: 20px;
+        }
+        @include breakpoint("medium") {
+            margin-left: 30px;
+            top: spacing("double");
+            bottom: spacing("double");
+            padding: 30px;
+            width: 60%;
+            max-width: 600px;
+        }
+        @include breakpoint("large") {
+            margin-left: 9rem;
+            padding: 40px;
+        }
+
+        .home-testimonials-heading {
+            margin-top: 0;
+            font-weight: bold;
+            color: #FFF;
+            @include breakpoint("small") {
+                font-size: 1.8rem;
+                margin-bottom: spacing("single");
+            }
+            @include breakpoint("medium") {
+                font-size: fontSize("small");
+            }
+        }
+        .home-testimonials-raiting {
+            width: 100%;
+            line-height: 1rem;
+            margin-bottom: spacing("quarter");
+            background: url('../img/blue-stars.svg') 0 0 no-repeat;
+            @include breakpoint("medium") {
+                line-height: 2rem;
+                margin-bottom: spacing("half");
+            }
+        }
+        .home-testimonials-text {
+            line-height: 19px;
+            @include breakpoint("small") {
+                font-size: fontSize("smaller");
+                line-height: 24px;
+            }
+            @include breakpoint("medium") {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+.testimonials_bottom_link {
+    background-color: #00f9f8;
+    text-align: center;
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 0.4rem;
+        position: relative;
+        font-family: "Bebas Neue";
+        font-size: 22px;
+        letter-spacing: 0.75px;
+        color: #363636;
+
+        @include breakpoint("medium") {
+            font-size: 30px;
+        }
+
+        &::after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23363636'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+            background-size: contain;
+            display: inline-block;
+            @include breakpoint("medium") {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: #003082;
+
+        a {
+            color: #ffffff;
+
+            &::after {
+                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+            }
+        }
+    }
+}

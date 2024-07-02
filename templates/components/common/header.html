@@ -1,0 +1,172 @@
+{{#if false}}
+{{#if banners}}
+{{> components/chiara/banners/count-standard-banners banners=banners}}
+{{#if banners.top_count}}
+<div class="banners{{#if theme_settings.topHeader_show}}{{#if theme_settings.topHeader_show_banner}} u-hiddenVisually-desktop{{/if}}{{/if}}" data-banner-location="top">
+    {{#each banners.top_metadata}}
+        {{#unless (occurrences this.content 'data-remote-banner-position')}}
+            {{#unless (occurrences this.content 'data-local-banner-position')}}
+                <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
+                    <div data-event-type="promotion-click">
+                        {{{this.content}}}
+                    </div>
+                </div>
+            {{/unless}}
+        {{/unless}}
+    {{/each}}
+</div>
+{{/if}}
+{{/if}}
+{{/if}}
+{{#if theme_settings.topHeader_show_banner}}
+<div class="banners" data-banner-location="top">
+    <div class="banner" data-event-type="promotion" data-entity-id="1" data-name="free shipping" data-position="top" data-banner-id="free shipping">
+        <div data-event-type="promotion-click">
+            <p style="text-align: center;">{{theme_settings.topHeader_banner_text}}</p>
+        </div>
+    </div>
+</div>
+{{/if}}
+<header class="header" role="banner"{{#if theme_settings.header_sticky}} data-stickymenu{{/if}}>
+    <!--
+    <a class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+    </a>
+    -->
+
+    {{#if theme_settings.topHeader_show}}
+    <div class="header-top">
+        <div class="header-top-container">
+            <ul class="header-top-list">
+                {{#if theme_settings.topHeader_show_phone}}
+                    {{#if theme_settings.contact_phone}}
+                        {{#if theme_settings.contact_phoneText}}
+                            <li class="header-top-item header-top-item--phone"><a class="header-top-action" href="tel:{{theme_settings.contact_phone}}">{{{theme_settings.contact_phoneText}}}</a></li>
+                        {{else}}
+                            <li class="header-top-item header-top-item--phone"><a class="header-top-action" href="tel:{{theme_settings.contact_phone}}">{{lang 'footer.call_us' phone_number=theme_settings.contact_phoneText}}</a></li>
+                        {{/if}}
+                    {{else}}
+                        {{#if settings.phone_number}}
+                            {{#if theme_settings.contact_phoneText}}
+                                <li class="header-top-item header-top-item--phone"><a class="header-top-action" href="tel:{{settings.phone_number}}">{{{theme_settings.contact_phoneText}}}</a></li>
+                            {{else}}
+                                <li class="header-top-item header-top-item--phone"><a class="header-top-action" href="tel:{{settings.phone_number}}">{{lang 'footer.call_us' phone_number=settings.phone_number}}</a></li>
+                            {{/if}}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+                
+                {{#and theme_settings.topHeader_show_address settings.address}}
+                <li class="header-top-item header-top-item--address"><a class="header-top-action">{{settings.address}}</a></li>
+                {{/and}}
+
+                {{#if theme_settings.topHeader_show_banner}}
+                {{#if banners.top_count}}
+                <li class="header-top-item header-top-item--banner">
+                    {{#each banners.top_metadata}}
+                        {{#unless (occurrences this.content 'data-remote-banner-position')}}
+                            {{#unless (occurrences this.content 'data-local-banner-position')}}
+                                <div class="banner">
+                                    {{{this.content}}}
+                                </div>
+                            {{/unless}}
+                        {{/unless}}
+                    {{/each}}
+                </li>
+                {{/if}}
+                {{/if}}
+                {{#if currency_selector.currencies.length '>' 1}}
+                <li class="header-top-item header-top-item--currency">
+                    <a class="header-top-action header-top-action--currencySelector has-dropdown" href="#" data-dropdown="header-top-currencySelection" data-options="align:top" aria-controls="header-top-currencySelection" aria-expanded="false">{{lang 'common.currency' code=currency_selector.active_currency_code}} <i class="icon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i></a>
+                    <ul class="dropdown-menu" id="header-top-currencySelection" data-dropdown-content aria-hidden="true" tabindex="-1">
+                        {{#each currency_selector.currencies}}
+                        <li class="dropdown-menu-item">
+                            <a href="{{{switch_url}}}">
+                                {{#if is_active}}
+                                <strong>{{name}}</strong>
+                                {{else}}
+                                {{name}}
+                                {{/if}}
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </li>
+                {{/if}}
+
+                {{#if customer}}
+                    <li class="header-top-item header-top-item--account">
+                        <a class="header-top-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+                    </li>
+                    <li class="header-top-item header-top-item--logout">
+                        <a class="header-top-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                    </li>
+                {{else}}
+                    {{#if settings.account_creation_enabled}}
+                    <li class="header-top-item header-top-item--createAccount">
+                        <a class="header-top-action" href="{{urls.auth.create_account}}">{{lang 'login.new_customer.create_account' }}</a>
+                    </li>
+                    {{/if}}
+                    <li class="header-top-item header-top-item--login">
+                        <a class="header-top-action" data-collapsible="navUser-more-panel" data-group-collapsible="main">{{lang 'login.heading' }}</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="header-main">
+        <div class="header-main-container header-main-container--{{theme_settings.logo-position}}"
+            {{#if theme_settings.header-backgroundImage '!==' ''}}
+                style="background-image:url({{theme_settings.header-backgroundImage}});"
+            {{/if}}>
+            {{#all (if page_type '===' 'default') (unless settings.store_logo.image)}}
+                <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
+                </h1>
+            {{else}}
+                <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                    {{> components/common/store-logo}}
+                </div>
+            {{/all}}
+
+            <div class="header_navigation">
+                <div class="navPages-container" id="menu" data-menu>
+                    <p class="mobile-panel-heading">
+                        <span class="mobile-panel-heading-ellipse">{{lang 'header.mobile_nav'}}</span>
+                    </p>
+                    <a class="mobile-panel-close" data-mobile-menu-toggle="menu" href="#"><svg><use xlink:href="#icon-close" aria-hidden="true" /></svg></a>
+                    <div class="header_navigation_holder">
+                        {{> components/common/navigation-menu}}
+                    </div>
+                </div>
+                <form class="header_search_form" action="/search.php">
+                    <input class="form-input" data-search-quick="" name="search_query" data-error-message="Search field cannot be empty." placeholder="Search" autocomplete="off">
+                </form>
+                {{> components/common/navigation}}
+                <div class="mobile_menu_bg"></div>
+            </div>
+
+            {{#if false}}
+                <div class="header_navigation_holder">
+                    {{> components/common/navigation-menu}}
+                </div>
+            <div class="header_navigation">
+
+                    <a href="/categories" class="header_navigation_link">categories</a>
+                    <a href="#features" class="header_navigation_link">Featured productss</a>
+                    <a href="#testimonials" class="header_navigation_link">Testimonials</a>
+                    <a href="/blog" class="header_navigation_link">Blog</a>
+                    <a href="/contact-us" class="header_navigation_link">Contact</a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+    {{{region name="header_bottom"}}}
+</header>
+
+<div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+    {{> components/common/quick-search}}
+</div>

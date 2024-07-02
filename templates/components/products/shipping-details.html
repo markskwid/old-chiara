@@ -1,0 +1,109 @@
+<div class="shipping-details-modal">
+  <ul class="shipping-details-tabs" data-tab>
+    <li class="productView-tab productView-tab--shipping is-active"><a class="productView-tab-title" href="#product-tab-shipping-cost">COST</a></li>
+    <li class="productView-tab productView-tab--shipping"><a class="productView-tab-title" href="#product-tab-shipping-schedule">SCHEDULE</a></li>
+  </ul>
+  <section class="productView-properties productView-properties--full productView-tab-content is-active" id="product-tab-shipping-cost">
+    {{#if theme_settings.shipping_cost_air_cond_1}}
+    <div class="shipping-details-block">
+      <h3 class="heading">Orders Shipping to the contiguous United States - via 2nd Day Air</h3>
+      <table>
+        <tr>
+          <th>{{lang 'products.shipping_details.order_total'}}</th>
+          <th>{{lang 'products.shipping_details.shipping_cost'}}</th>
+        </tr>
+        {{#if theme_settings.shipping_cost_air_cond_1}}
+        <tr>
+          <td>{{theme_settings.shipping_cost_air_cond_1}}</td>
+          <td>{{theme_settings.shipping_cost_air_value_1}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_cost_air_cond_2}}
+        <tr>
+          <td>{{theme_settings.shipping_cost_air_cond_2}}</td>
+          <td>{{theme_settings.shipping_cost_air_value_2}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+    {{/if}}
+    {{#if theme_settings.shipping_cost_ground_cond_1}}
+    <div class="shipping-details-block">
+      <h3 class="heading">Orders Shipping to Florida - via Ground</h3>
+      <table>
+        <tr>
+          <th>{{lang 'products.shipping_details.order_total'}}</th>
+          <th>{{lang 'products.shipping_details.shipping_cost'}}</th>
+        </tr>
+        {{#if theme_settings.shipping_cost_ground_cond_1}}
+        <tr>
+          <td>{{theme_settings.shipping_cost_ground_cond_1}}</td>
+          <td>{{theme_settings.shipping_cost_ground_value_1}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_cost_ground_cond_2}}
+        <tr>
+          <td>{{theme_settings.shipping_cost_ground_cond_2}}</td>
+          <td>{{theme_settings.shipping_cost_ground_value_2}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+  </section>
+  {{/if}}
+  <section class="productView-properties productView-properties--full productView-tab-content" id="product-tab-shipping-schedule">
+    {{#if theme_settings.shipping_schedule_received_1}}
+    <div class="shipping-details-block">
+      <!--<h3 class="heading">Orders Shipping to Florida - via Ground</h3>-->
+      <table>
+        <tr>
+          <th>{{lang 'products.shipping_details.order_received'}}</th>
+          <th>{{lang 'products.shipping_details.order_delivered'}}</th>
+        </tr>
+        {{#if theme_settings.shipping_schedule_received_1}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_1}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_1}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_2}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_2}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_2}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_3}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_3}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_3}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_4}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_4}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_4}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_5}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_5}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_5}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_6}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_6}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_6}}</td>
+        </tr>
+        {{/if}}
+        {{#if theme_settings.shipping_schedule_received_7}}
+        <tr>
+          <td>{{theme_settings.shipping_schedule_received_7}}</td>
+          <td>{{theme_settings.shipping_schedule_delivered_7}}</td>
+        </tr>
+        {{/if}}
+      </table>
+    </div>
+    {{/if}}
+  </section>
+</div>

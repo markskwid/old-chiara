@@ -1,0 +1,25 @@
+<article class="footer-info-col footer-info-col--newsletter" data-section-type="newsletterSubscription">
+    <div class="footer-newsletter-content">
+        <h5 class="footer-info-heading">{{lang 'newsletter.subscribe'}}</h5>
+        <p>{{lang 'newsletter.subscribe_intro'}}</p>
+        {{#if settings.show_newsletter_summary}}
+            <p>{{settings.newsletter_summary}}</p>
+        {{/if}}
+    </div>
+    <form class="form footer-newsletter-form" action="{{urls.subscribe.action}}" method="post">
+        <fieldset class="form-fieldset">
+            <input type="hidden" name="action" value="subscribe">
+            <input type="hidden" name="nl_first_name" value="bc">
+            <input type="hidden" name="check" value="1">
+            <div class="form-field">
+                <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+                <div class="footer-newsletter-holder">
+                    <input class="form-input footer-newsletter-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
+                    <div class="button footer-newsletter-button">
+                        <input type="submit" value="{{lang 'newsletter.subscribe_submit'}}">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</article>

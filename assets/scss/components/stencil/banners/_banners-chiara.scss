@@ -1,0 +1,29 @@
+.banners {
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(stencilColor("topBanner-bgColor"), 0.5);
+    color: stencilColor("topBanner-color");
+    padding: spacing("quarter") $container-padding / 2;
+    font-family: "Sriracha";
+    font-size: 16px;
+    line-height: 1;
+
+    .page-type-default & {
+        @media (max-width: screenSize("medium") - 1px) {
+            position: absolute;
+        }
+    }
+
+    @include breakpoint("medium") {
+        padding: spacing("half") $container-padding / 2;
+        position: relative;
+        background-color: stencilColor("topBanner-bgColor");
+        font-size: 21px;
+    }
+    
+    a {
+        color: stencilColor("topBanner-color-link");
+    }
+}
+
+

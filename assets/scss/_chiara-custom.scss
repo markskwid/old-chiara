@@ -1,0 +1,649 @@
+.maintenanceNotice{
+    display:none
+}
+.previewCartAction .button {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.button--outline {
+    border: 2px solid #003082 !important;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.cart-title.optimizedCheckout-headingSecondary {
+  font-size: 22px;
+}
+.product-title.optimizedCheckout-contentPrimary {
+  font-size: 16px;
+}
+
+
+a.navPages-action.is-root.has-not-subMenu:hover {
+    color: #fff !important;
+}
+
+.productView-hide {
+  display: none;
+}
+
+.quickView {
+  .productView-hide {
+    display: inline-block;
+    background-color: transparent;
+    color: #003082;
+    border-width: 2px;
+    border-color: #003082;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #003082;
+      color: #fff;
+    }
+  }
+  .productView-descHolder {
+    display: none;
+  }
+}
+
+.productView-productsList--similar .stamped-badge-caption,
+.chiara-section--featuredProducts .stamped-badge-caption {
+  color: #fff;
+}
+
+.howto_care {
+  display: none;
+}
+
+@media (min-width: 801px) {
+  .navPage-subMenu {
+    min-height: 500px;
+  }
+}
+
+.chiara-categoriesList-list {
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+}
+
+
+.preview-modal .modal-header-title {
+  font-size: 22px;
+}
+.previewCart .productView-title {
+}
+.button.button--primary.previewCartCheckout-checkoutButton {
+}
+.button.button--primary.previewCartCheckout-continueButton,.button.button--primary.previewCartCheckout-checkoutButton {
+  background-color: #00f9f8;
+  border-color: #00f9f8;
+  color: #000;
+  font-family: "Bebas Neue";
+  font-size: 20px;
+}
+.button.button--primary.previewCartCheckout-continueButton:hover, .button.button--primary.previewCartCheckout-checkoutButton:hover {
+  background-color: #003082;
+  border-color: #003082;
+  color: #fff;
+}
+.button.previewCartCheckout-viewCartButton {
+  border-color: #003082;
+  color: #003082;
+  font-family: "Bebas Neue";
+  font-size: 20px;
+}
+.button.previewCartCheckout-viewCartButton:hover {
+  background-color: #003082;
+  color: #fff;
+}
+
+.productView-review--widget {
+  padding-bottom: 120px;
+}
+.chiara-category-description h2 {
+    font-size: 20px;
+}
+.chiara-category-description iframe {
+  width: 100%;
+}
+
+.recentBlog-margin {
+    margin: 6.4rem 20px 0;
+}
+.chiara-recentBlog-posts .blog-title {
+    line-height: 1.2;
+}
+.chiara-recentBlog-posts .blog-post > a {
+    display: inline-block;
+}
+
+.stamped-visual-gallery-media-block-template .stamped-col-lg-2 {
+  width: 25%;
+}
+
+
+.alertBox.alertBox--info h2 {
+  font-size: 20px;
+}
+
+.head_image .head-bubble.head-bubble-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+@media (min-width: 801px) {
+    .header-main-container--left .header-logo {
+        left: 10px;
+    }
+}
+
+.cart-item-image,
+.previewCartItem-image img {
+    border-radius: 0;
+    border: none;
+}
+.chiara-section--testimonialsCarousel .testimonialsCarousel-holder .video_holder {height: 100%;}
+
+.body.rewards-page .breadcrumbs, .body.rewards-page .page-heading {
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  height: 0;
+}
+.body.rewards-page {
+  overflow-x: hidden;
+  margin-top: 0;
+}
+[data-widget-type="rewards-summary"] {
+  background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/blue-coral-rewards-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+[data-widget-type="rewards-summary"] {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+[data-widget-type="rewards-summary"] p {
+  color: #fff;
+}
+[data-widget-type="rewards-summary"] .stamped-rewards-widget-btn.stamped-rewards-widget-btn-secondary {
+  border-color: #fff;
+  color: #fff;
+}
+[data-widget-type="rewards-summary"] .stamped-rewards-widget-btn.stamped-rewards-widget-btn-secondary:hover, [data-widget-type="rewards-summary"] .stamped-rewards-widget-btn.stamped-rewards-widget-btn-secondary:active, [data-widget-type="rewards-summary"] .stamped-rewards-widget-btn.stamped-rewards-widget-btn-secondary:focus {
+  background-color: #fff;
+  color: var(--stamped-rewards-button-color-background);
+}
+
+[data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-how-it-works {
+    padding: 30px 0;
+}
+[data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-how-it-works .stamped-rewards-widget-heading-main {
+    margin: 0 0 50px;
+    color: #373737;
+    font-size: 40px;
+}
+[data-widget-type="rewards-how-it-works"] ul.stamped-rewards-widget-how-it-works-list {
+    max-width: 750px !important;
+    text-align: center;
+}
+[data-widget-type="rewards-how-it-works"] ul.stamped-rewards-widget-how-it-works-list .stamped-rewards-widget-number, [data-widget-type="rewards-how-it-works"] ul.stamped-rewards-widget-how-it-works-list .stamped-rewards-widget-heading {
+    display: none;
+}
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item p {
+    padding: 0 30px;
+}
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item {
+    position: relative;
+}
+
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    
+}
+
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item[data-target-id="section-step-one"]:before {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/join.png");
+}
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item[data-target-id="section-step-two"]:before {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/earn.png");
+}
+[data-widget-type="rewards-how-it-works"] li.stamped-rewards-widget-how-it-works-list-item[data-target-id="section-step-three"]:before {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/redeem.png");
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaigns-spendings {
+    padding: 30px 0 !important;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-heading-main {
+    margin: 0 0 15px;
+    font-size: 40px;
+    color: #373737;
+    line-height: 1;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-description {
+    font-size: 18px;
+    color: #373737;
+    margin-bottom: 20px;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-title {
+    font-size: 18px;
+    color: #373737;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-value {
+    font-size: 18px;
+    color: #373737;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image i.fal {
+    display: none;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image {
+    position: relative;
+}
+
+[data-widget-type="rewards-spendings"] .stamped-rewards-widget-campaign-image:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/money.png");
+}
+
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-earnings {
+    max-width: 1200px !important;
+}
+@media (min-width: 768px) {
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item {
+        flex: 0 0 33.3333% !important;
+        padding: 15px 0 !important;
+    }
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content {
+    flex-grow: 0 !important;
+    text-align: center;
+    border: none !important;
+    width: 350px;
+    height: 280px;
+    padding: 15px;
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="AccountNew"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-8.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="AccountBirthday"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-6.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="OrderNew"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-7.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialFollowInstagram"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-1.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialFollowFacebook"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-3.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="Review"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-6.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="ReviewVideo"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-5.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialYouTube"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-4.jpg");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="Custom"] .stamped-rewards-widget-item-content {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/image-2.jpg");
+}
+@media (min-width: 768px) and (max-width: 1024px){ 
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item {
+        flex-grow: 1 !important;
+        width: auto;
+        height: auto;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item {
+        flex: 0 0 100% !important;
+    }
+    [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content {
+        width: 100%;
+    }
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0!important;
+    align-content: center;
+    border: 1px solid #fff;
+    height: 100%;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image i {
+    display: none;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-image {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    margin: 0 auto 15px;
+    background-repeat: no-repeat;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="AccountNew"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/coral-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="AccountBirthday"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/birthday-cake-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="OrderNew"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/cart-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialFollowInstagram"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/video-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialFollowFacebook"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/refer-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="Review"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/review-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="ReviewVideo"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/facebook-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="SocialYouTube"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/instagram-wh.png");
+}
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item[data-campaign-event="Custom"] .stamped-rewards-widget-campaign-image {
+    background-image: url("https://cdn11.bigcommerce.com/s-tag5rh/product_images/uploaded_images/youtube-wh.png");
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-campaign-value {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+
+// [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-button[data-type="signup"],
+// [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-button[data-type="login"]{
+//     display: none!important;
+// }
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content:hover {
+    background-image: none !important;
+    background-color: #132A53;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content:hover .stamped-rewards-widget-campaign-value {
+    display: none;
+}
+
+// [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content:hover .stamped-rewards-widget-button[data-type="signup"],
+// [data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-item-content:hover .stamped-rewards-widget-button[data-type="login"] {
+//     display: block !important;
+// }
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-button {
+    margin-top: 5px !important;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-button[data-type="signup"] {
+    width: 130px;
+    height: 45px;
+    background-color: #01f9f9;
+    color: #000;
+    text-transform: uppercase;
+    margin: 5px auto 0;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-button[data-type="login"] {
+    background-color: transparent;
+    color: #fff;
+}
+
+[data-widget-type="rewards-earnings-v2"] .stamped-rewards-widget-heading-main {
+    margin: 0 0 15px !important;
+}
+
+.body.rewards-page .page-content p {
+    margin-bottom: 0;
+}
+
+button.slick-prev.slick-arrow, button.slick-next.slick-arrow {
+    display: none !important;
+}
+
+.previewCartList.is-scroll {
+    @media (min-width: 801px) {
+        display: block;
+        height: 400px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+
+.page-type-search,
+.page-type-category .product-listing-container {
+    .productGrid {
+        .product {
+            .card-body {
+                .card-learn-more {
+                    margin-top: 20px;
+                    a {
+                        padding: spacing("half") spacing("single");
+                        color: #363636;
+                        background-color: #00f9f8;
+
+                        @include breakpoint("medium") {
+                            font-size: fontSize("smaller");
+                        }
+
+                        @include breakpoint("large") {
+                            font-size: fontSize("small");
+                        }
+
+                        &::after {
+                            top: 0;
+                            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23363636'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+                            background-size: contain;
+
+                            @include breakpoint("medium") {
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            @include breakpoint("large") {
+                                width: 20px;
+                                height: 22px;
+                            }
+                        }
+
+                        &:hover {
+                            color: #fff;
+                            background-color: #003082;
+
+                            &::after {
+                                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-type-search,
+.quickSearchResults,
+.page-type-category {
+    .sidebarBlock--products {
+        .productGrid .card-body {
+            .card-title > a,
+            .price-section-group .price--main,
+            .card-learn-more a {
+                font-size: 18px;
+            }
+            .card-learn-more a::after {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .productGrid .card-body {
+        .card-title > a,
+        .price-section-group .price--main,
+        .card-learn-more a {
+            color: #003082;
+
+            &:hover, &:active, &:focus {
+                color: #003082;
+            }
+        }
+        .card-learn-more a {
+            &::after,
+            &:hover::after {
+                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23003082'><path d='M 50,50 5,95 5,5 z'/></svg>");
+            }
+        }
+    }
+}
+
+.chiara-section--products-style-parallax {
+    background-position: top center;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    padding: spacing("single") + spacing("half") 0 0;
+    margin-left: -$container-padding / 2;
+    margin-right: -$container-padding / 2;
+
+    @include breakpoint("small") {
+        background-size: 120%;
+    }
+    
+    @include breakpoint("medium") {
+        width: calc(100vw - 20px);
+        margin-left: 50%;
+        margin-right: 0;
+        transform: translateX(-50%);
+        overflow: hidden;
+        max-width: remCalc(1720);
+        background-size: contain;
+        padding-top: spacing("double");
+    }
+
+    @include breakpoint("large") {
+        padding-top: spacing("single") * 4;
+    }
+
+    .chiara-products {
+        @include container;
+    }
+
+    .page-heading {
+        color: stencilColor("color-textHeading-alt");
+        margin-bottom: spacing("single") + spacing("half");
+
+        @include breakpoint("medium") {
+            margin-bottom: spacing("double");
+        }
+
+        @include breakpoint("large") {
+            margin-bottom: spacing("single") * 4;
+        }
+
+        + .page-subheading {
+            margin-top: -(spacing("single"));
+
+            @include breakpoint("medium") {
+                margin-top: -(spacing("single") + spacing("half"));
+            }
+
+            @include breakpoint("large") {
+                margin-top: -(spacing("single") * 3 + spacing("half"));
+            }
+        }
+    }
+
+    .page-subheading {
+        color: stencilColor("color-textHeading-alt");
+        margin-bottom: spacing("single") + spacing("half");
+
+        @include breakpoint("medium") {
+            margin-bottom: spacing("double");
+        }
+
+        @include breakpoint("large") {
+            margin-bottom: spacing("single") * 4;
+        }
+    }
+
+    .card {
+        background-color: container("fill");
+    }
+}
+
+.head_image {
+    display: block;
+}
+
+
+.video-frame {
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+.pagination-item.pagination-item--current,
+.pagination-item:hover,
+.pagination-item:active,
+.pagination-item:focus {
+    border-color: #003082;
+    background-color: #003082;
+}
+.pagination-item {
+    border-color: #003082;
+}

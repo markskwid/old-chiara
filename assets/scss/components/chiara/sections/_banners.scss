@@ -1,0 +1,148 @@
+.faq_block {
+    margin-bottom: -4.2rem;
+    background: #003082;
+    padding: 60px 20px 80px;
+    // margin-bottom: -300px;
+    position: relative;
+    @include breakpoint("medium") {
+        margin-bottom: -6.4rem;
+        padding: 90px 50px;
+    }
+    @include breakpoint("large") {
+        margin-bottom: -8.5rem;
+        padding: 130px 50px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background: url("../img/bg/blue_top_bg.png") 0 calc(100% + 1px) no-repeat #fff;
+        background-size: 100% auto;
+
+        @include breakpoint("medium") {
+            height: 90px;
+        }
+        @include breakpoint("large") {
+            background-size: 100% 100%;
+            height: 130px;
+        }
+    }
+
+    .faq_block_header {
+        text-align: center;
+        font-family: "Sriracha";
+        font-size: fontSize("large");
+        color: #fff;
+        @include breakpoint("medium") {
+            font-size: fontSize("larger");
+        }
+    }
+
+    .faq_header {
+        font-family: "Bebas Neue";
+        font-size: 20px;
+        letter-spacing: 0.75px;
+        color: #00f9f8;
+        @include breakpoint("medium") {
+            font-size: fontSize("large");
+        }
+    }
+
+    .faq_text {
+        height: 0;
+        opacity: 0;
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 15px;
+        overflow: hidden;
+        transition: all .2s;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: #00f9f8;
+            }
+        }
+
+        @include breakpoint("medium") {
+            height: auto;
+            font-size: fontSize("smaller");
+        }
+
+        &.is-open {
+            height: auto;
+            opacity: 1;
+        }
+    }
+}
+
+.chiara-banners-list {
+    list-style: none;
+    margin: 0;
+
+    @include breakpoint("small") {
+        display: flex;
+        margin: 0 (-(spacing("eighth")));
+        justify-content: center;
+    }
+
+    + .chiara-banners-list {
+        margin-top: spacing("quarter");
+    }
+}
+
+.chiara-banners-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint("small") {
+        margin: 0 spacing("eighth");
+    }
+
+    img {
+        transition: all .3s ease-in-out;
+    }
+
+    img + img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    a:hover {
+        img {
+            // filter: grayscale(100%);
+            transform: scale(1.1);
+            transition: all .8s ease-in-out;
+        }
+
+        img + img {
+            // filter: none;
+            transform: scale(.95);
+            transition: all .6s ease-in-out;
+        }
+    }
+
+    + .chiara-banners-item {
+        margin-top: spacing("quarter");
+
+        @include breakpoint("small") {
+            margin-top: 0;
+        }
+    }
+}
+
+[data-local-banner-position] {
+    &:not(.loaded) {
+        display: none;
+    }
+}

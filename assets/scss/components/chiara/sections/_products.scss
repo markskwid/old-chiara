@@ -1,0 +1,357 @@
+.card-figure {
+    background-color: transparent;
+    .card-image {
+        border-radius: 100%;
+        overflow: hidden;
+        border: 9px solid #222222;
+    }
+}
+.chiara-section--featuredProducts {
+    background-color: #363636;
+    position: relative;
+    padding-top: 60px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @include breakpoint("medium") {
+        padding-top: 90px;
+        background-position: 50% 130px;
+    }
+    @include breakpoint("large") {
+        padding-top: 130px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        top: 0;
+        left: 0;
+        background: url("../img/bg/feature_top_bg.png") 0 0 no-repeat #fff;
+        background-size: 100% auto;
+
+        @include breakpoint("medium") {
+            height: 90px;
+        }
+        @include breakpoint("large") {
+            height: 130px;
+        }
+    }
+
+    .chiara-products {
+        .page-heading {
+            color: #00f9f8;
+            margin-bottom: 5rem
+        }
+    }
+
+    .featured_bottom_link {
+        background-color: #00f9f8;
+        text-align: center;
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 0.4rem;
+            position: relative;
+            font-family: "Bebas Neue";
+            font-size: 22px;
+            letter-spacing: 0.75px;
+            color: #363636;
+
+            @include breakpoint("medium") {
+                font-size: 30px;
+            }
+
+            &::after {
+                content: "";
+                width: 14px;
+                height: 14px;
+                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23363636'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+                background-size: contain;
+                display: inline-block;
+                position: relative;
+                @include breakpoint("medium") {
+                    width: 20px;
+                    height: 20px;
+                    top: 2px;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: #003082;
+
+            a {
+                color: #ffffff;
+
+                &::after {
+                    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+                }
+            }
+        }
+    }
+}
+
+.productGrid {
+    margin: 0;
+
+    .product {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+
+        .card-figure {
+            background-color: transparent;
+            .card-image {
+                border-radius: 100%;
+                overflow: hidden;
+                border: 9px solid #222222;
+            }
+        }
+    }
+}
+
+.card-body {
+    .card-title > a {
+        font-family: "Bebas Neue";
+        font-size: 16px;
+        letter-spacing: 0.75px;
+        line-height: 1;
+        color: #00f9f8;
+
+        &:hover {
+            color: #fff;
+        }
+
+        @include breakpoint("medium") {
+            font-size: fontSize("smaller");
+        }
+        @include breakpoint("large") {
+            font-size: fontSize("small");
+        }
+    }
+
+    .icon--ratingFull {
+        svg {
+            fill: #ffffff;
+        }
+    }
+
+    .price-section-group {
+        font-family: "Sriracha";
+
+        .price--main {
+            color: #00f9f8;
+            font-size: 18.5px;
+            @include breakpoint("medium") {
+                font-size: fontSize("small");
+            }
+            @include breakpoint("large") {
+                font-size: 45px;
+            }
+        }
+    }
+    .card-learn-more a {
+        font-family: "Bebas Neue";
+        font-size: 16px;
+        letter-spacing: 0.75px;
+        color: #00f9f8;
+        text-decoration: none;
+
+        @include breakpoint("medium") {
+            font-size: fontSize("smaller");
+        }
+
+        @include breakpoint("large") {
+            font-size: fontSize("small");
+        }
+
+        &::after {
+            content: "";
+            position: relative;
+            top: 1px;
+            width: 11px;
+            height: 11px;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%2300f9f8'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+            background-size: contain;
+            display: inline-block;
+
+            @include breakpoint("medium") {
+                width: 16px;
+                height: 16px;
+                top: -1px;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::after {
+                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+            }
+        }
+    }
+}
+
+.page-type-category {
+    .product-listing-container {
+        .productGrid {
+            .product {
+                .card-body {
+                    .card-learn-more {
+                        margin-top: 20px;
+                        a {
+                            padding: spacing("half") spacing("single");
+                            color: #363636;
+                            background-color: #00f9f8;
+
+                            @include breakpoint("medium") {
+                                font-size: fontSize("smaller");
+                            }
+
+                            @include breakpoint("large") {
+                                font-size: fontSize("small");
+                            }
+
+                            &::after {
+                                top: 0;
+                                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23363636'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+                                background-size: contain;
+
+                                @include breakpoint("medium") {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+
+                                @include breakpoint("large") {
+                                    width: 20px;
+                                    height: 22px;
+                                }
+                            }
+
+                            &:hover {
+                                color: #fff;
+                                background-color: #003082;
+
+                                &::after {
+                                    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quickSearchResults,
+.page-type-category {
+    .sidebarBlock--products {
+        .productGrid .card-body {
+            .card-title > a,
+            .price-section-group .price--main,
+            .card-learn-more a {
+                font-size: 18px;
+            }
+            .card-learn-more a::after {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .productGrid .card-body {
+        .card-title > a,
+        .price-section-group .price--main,
+        .card-learn-more a {
+            color: #003082;
+
+            &:hover, &:active, &:focus {
+                color: #003082;
+            }
+        }
+        .card-learn-more a {
+            &::after,
+            &:hover::after {
+                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23003082'><path d='M 50,50 5,95 5,5 z'/></svg>");
+            }
+        }
+    }
+}
+
+.chiara-section--products-style-parallax {
+    background-position: top center;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    padding: spacing("single") + spacing("half") 0 0;
+    margin-left: -$container-padding / 2;
+    margin-right: -$container-padding / 2;
+
+    @include breakpoint("small") {
+        background-size: 120%;
+    }
+    
+    @include breakpoint("medium") {
+        width: calc(100vw - 20px);
+        margin-left: 50%;
+        margin-right: 0;
+        transform: translateX(-50%);
+        overflow: hidden;
+        max-width: remCalc(1720);
+        background-size: contain;
+        padding-top: spacing("double");
+    }
+
+    @include breakpoint("large") {
+        padding-top: spacing("single") * 4;
+    }
+
+    .chiara-products {
+        @include container;
+    }
+
+    .page-heading {
+        color: stencilColor("color-textHeading-alt");
+        margin-bottom: spacing("single") + spacing("half");
+
+        @include breakpoint("medium") {
+            margin-bottom: spacing("double");
+        }
+
+        @include breakpoint("large") {
+            margin-bottom: spacing("single") * 4;
+        }
+
+        + .page-subheading {
+            margin-top: -(spacing("single"));
+
+            @include breakpoint("medium") {
+                margin-top: -(spacing("single") + spacing("half"));
+            }
+
+            @include breakpoint("large") {
+                margin-top: -(spacing("single") * 3 + spacing("half"));
+            }
+        }
+    }
+
+    .page-subheading {
+        color: stencilColor("color-textHeading-alt");
+        margin-bottom: spacing("single") + spacing("half");
+
+        @include breakpoint("medium") {
+            margin-bottom: spacing("double");
+        }
+
+        @include breakpoint("large") {
+            margin-bottom: spacing("single") * 4;
+        }
+    }
+
+    .card {
+        background-color: container("fill");
+    }
+}

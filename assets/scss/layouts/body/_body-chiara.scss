@@ -1,0 +1,240 @@
+body {
+    // IE 10+: Fix margin-left: 50%
+    -ms-overflow-x: hidden;
+}
+
+// Edge: Fix margin-left: 50%
+@supports (-ms-ime-align:auto) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.body {
+    margin-top: 0;
+    margin-bottom: 4.2rem;
+    // padding: 0;
+
+    @include breakpoint("medium") {
+        margin-top: spacing("half");
+        margin-bottom: 6.4rem;
+    }
+
+    @include breakpoint("large") {
+        margin-bottom: 8.4rem;
+    }
+}
+
+.page-content {
+    h4 {
+        font-family: "Bebas Neue";
+        color: #003082;
+        letter-spacing: 0.75px;
+    }
+
+    p {
+        color: #363636;
+    }
+}
+
+.page-type-default .body {
+    padding: 0;
+}
+
+.page-sidebar {
+    @include breakpoint("xxlarge") {
+        padding-right: $column-gutter / 2 * 6;
+    }
+}
+
+.page-sidebar + .page-content {
+    @include breakpoint("xxlarge") {
+    }
+}
+
+.page--no-breadcrumb {
+    @media (max-width: screenSize("medium") - 1px) {
+        margin-top: spacing("half");
+    }
+}
+
+.head_image {
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+    @include breakpoint("medium") {
+        margin-top: 0 - spacing("half");
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 100%;
+        align-self: flex-end;
+    }
+    .head-bubble {
+        position: absolute;
+        border-radius: 100%;
+        color: #FFF;
+        text-align: center;
+        text-decoration: none;
+        font-family: "Bebas Neue";
+        letter-spacing: 0.75px;
+        &.head-bubble-1 {
+            left: 14px;
+            top: 5px;
+            width: 105px;
+            height: 105px;
+            background: rgba(0, 48, 130, 0.3);
+            padding: 31px 8px;
+            font-size: 16px;
+            line-height: 12px;
+            & > span {
+                font-size: 25px;
+                line-height: 20px;
+            }
+            @include breakpoint("small") {
+                left: 35px;
+                top: 10px;
+                width: 150px;
+                height: 150px;
+                font-size: 33px;
+                line-height: 30px;
+                padding: 40px 20px;
+                & > span {
+                    font-size: 55px;
+                    line-height: 40px;
+                }
+            }
+            @include breakpoint("medium") {
+                left: 35px;
+                top: 10px;
+                width: 240px;
+                height: 240px;
+                font-size: 41px;
+                line-height: 30px;
+                padding: 77px 20px;
+                & > span {
+                    font-size: 65px;
+                    line-height: 58px;
+                }
+            }
+        }
+        &.head-bubble-2 {
+            left: 8px;
+            top: 80px;
+            width: 70px;
+            height: 70px;
+            background: rgba(203, 241, 251,0.3);
+            padding: 22px 8px;
+            font-size: 16px;
+            line-height: 15px;
+            @include breakpoint("small") {
+                left: 10px;
+                top: 130px;
+                width: 120px;
+                height: 120px;
+                font-size: 30px;
+                line-height: 32px;
+                padding: 30px 20px;
+            }
+            @include breakpoint("medium") {
+                left: 20px;
+                top: 180px;
+                width: 150px;
+                height: 150px;
+                font-size: 36px;
+                line-height: 32px;
+                padding: 50px 20px;
+            }
+        }
+        &.head-bubble-3 {
+            left: 70px;
+            top: 90px;
+            width: 80px;
+            height: 80px;
+            background: rgba(14,107,133,0.3);
+            padding: 16px;
+            font-size: 24px;
+            line-height: 24px;
+            & > span {
+                font-size: 32px;
+                line-height: 20px;
+            }
+            @include breakpoint("small") {
+                left: 110px;
+                top: 140px;
+                width: 140px;
+                height: 140px;
+                font-size: 50px;
+                padding: 25px;
+                line-height: 45px;
+                & > span {
+                    font-size: 62px;
+                    line-height: 45px;
+                }
+            }
+            @include breakpoint("medium") {
+                left: 130px;
+                top: 200px;
+                width: 190px;
+                height: 190px;
+                font-size: 70px;
+                padding: 35px;
+                line-height: 58px;
+                & > span {
+                    font-size: 82px;
+                    line-height: 66px;
+                }
+            }
+        }
+        &.head-bubble-4 {
+            left: 30px;
+            top: 140px;
+            width: 60px;
+            height: 60px;
+            background: rgba(8, 110, 68,0.3);
+            padding: 21px 0px;
+            font-size: 11px;
+            @include breakpoint("small") {
+                left: 50px;
+                top: 230px;
+                width: 100px;
+                height: 100px;
+                font-size: 20px;
+                padding: 33px 0px;
+            }
+            @include breakpoint("medium") {
+                left: 60px;
+                top: 320px;
+                width: 125px;
+                height: 125px;
+                font-size: 24px;
+                padding: 49px 0px;
+            }
+            &::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='50' height='100' fill='%23fff'><path d='M 50,50 5,95 5,5 z'/></svg>") 100% 50% no-repeat;
+                background-size: contain;
+                display: inline-block;
+                @include breakpoint("small") {
+                    width: 14px;
+                    height: 14px;
+                }
+                @include breakpoint("medium") {
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+}
+.head_padding {
+    padding-bottom: 60px;
+    width: 100%;
+    background: #CCC;
+    @include breakpoint("medium") {
+        padding-bottom: 30px;
+    }
+}

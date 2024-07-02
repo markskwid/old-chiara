@@ -1,0 +1,16 @@
+@mixin custom-fonts {
+    @font-face {
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/BebasNeueRegular.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Sriracha";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/Sriracha-Regular.woff2") format("woff2"),
+            url("../fonts/Sriracha-Regular.woff") format("woff");
+    }
+}
